@@ -7,32 +7,39 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.StringRes;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class JustDoItAdapter extends RecyclerView.Adapter<JustDoItAdapter.JustDoItViewHolder> {
+public class JustDoItAdapter extends RecyclerView.Adapter<CreateValueOfElementOfListGoods> {
     private  static int viewHolderCount;
     private int numberItems;
     public JustDoItAdapter(int numberItems){
         this.numberItems = numberItems;
         viewHolderCount = 0;
     }
+
+
     @Override
-    public JustDoItViewHolder onCreateViewHolder( ViewGroup parent, int viewType) {
+    public CreateValueOfElementOfListGoods onCreateViewHolder( ViewGroup parent, int viewType) {
         Context context = parent.getContext();
         int layoutIdForListItem = R.layout.item_of_recyclerview;
 
         LayoutInflater inflater = LayoutInflater.from(context);
         View view = inflater.inflate(layoutIdForListItem, parent, false);
-        JustDoItViewHolder myViewHolder = new JustDoItViewHolder(view);
-        myViewHolder.ViewHolderIndex.setText("Элемент списка Recycler " + viewHolderCount);
+        CreateValueOfElementOfListGoods myViewHolder = new CreateValueOfElementOfListGoods(view);
+        //JustDoItViewHolder myViewHolder = new JustDoItViewHolder(view);
+        Product_structure myProductOne = new Product_structure("Амулет: Клык медведя", "7000");
+        myViewHolder.WriteValues_into_product1(myProductOne);
+
+        Product_structure myProductTwo = new Product_structure("Корабль", "23500");
+        myViewHolder.WriteValues_into_product2(myProductTwo);
         viewHolderCount++;
 
         return myViewHolder;
     }
 
     @Override
-    public void onBindViewHolder( JustDoItViewHolder holder, int position) {
-        holder.bind(position);
+    public void onBindViewHolder( CreateValueOfElementOfListGoods holder, int position) {
     }
 
     @Override
@@ -40,18 +47,5 @@ public class JustDoItAdapter extends RecyclerView.Adapter<JustDoItAdapter.JustDo
         return numberItems;
     }
 
-    class JustDoItViewHolder extends RecyclerView.ViewHolder{
-        //TextView BodyItemList;
-        TextView ViewHolderIndex;
 
-        public JustDoItViewHolder(View itemView) {
-            super(itemView);
-
-           // BodyItemList = itemView.findViewById(R.id.BodyItemOfList_id);
-            ViewHolderIndex = itemView.findViewById(R.id.tv_view_holder_number);
-        }
-        void bind(int listIndex){
-           // BodyItemList.setText(String.valueOf(listIndex));
-        }
-    }
 }

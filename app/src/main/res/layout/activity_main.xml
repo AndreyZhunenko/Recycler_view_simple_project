@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_gravity="center"
+    android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/TitleId"
+        android:gravity="center"
+        android:text="@string/TitleApp"
+        android:textSize="40sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </TextView>
+
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/JustDoIT_id"
+        android:id="@+id/List_of_goods_id"
         android:layout_marginTop="20dp"
         android:layout_below="@+id/TitleId"
         android:layout_width="match_parent"
