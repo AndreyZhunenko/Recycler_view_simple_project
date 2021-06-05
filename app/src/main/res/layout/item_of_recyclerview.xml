@@ -16,9 +16,9 @@
             android:orientation="vertical"
             android:background="@drawable/styles_for_product_element"
             android:layout_width="180dp"
-            android:layout_height="230dp">
+            android:layout_height="236dp">
             <LinearLayout
-                android:layout_marginTop="2dp"
+                android:layout_marginTop="5dp"
                 android:orientation="vertical"
                 android:layout_marginStart="19dp"
                 android:background="@drawable/styles_for_main_part_of_product"
@@ -71,9 +71,9 @@
                 android:orientation="vertical"
                 android:background="@drawable/styles_for_product_element"
                 android:layout_width="180dp"
-                android:layout_height="230dp">
+                android:layout_height="236dp">
             <LinearLayout
-                android:layout_marginTop="2dp"
+                android:layout_marginTop="5dp"
                 android:orientation="vertical"
                 android:layout_marginStart="19dp"
                 android:background="@drawable/styles_for_main_part_of_product"
